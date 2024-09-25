@@ -1,0 +1,258 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+#wrap {
+    overflow: hidden;
+}
+::-webkit-scrollbar {
+    width: 12px; /* 스크롤바의 너비 */
+}
+
+/* 스크롤바의 트랙 (스크롤바가 이동하는 영역) */
+::-webkit-scrollbar-track {
+    background: #111111; /* 트랙의 배경색 */
+}
+
+/* 스크롤바 핸들 (스크롤바의 드래그 가능한 부분) */
+::-webkit-scrollbar-thumb {
+    background: #FFA400; /* 핸들의 배경색 */
+}
+/* main_img */
+.main_img {
+    position: relative;
+    height: 275px;
+    display: flex;
+    justify-content: left;
+}
+.main_img .logo {
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -30%);
+}
+.main_img .logo > a {
+    display: block;
+    background: url(../img/biglogo.svg) no-repeat center/cover;
+    width: 100%;
+    height: 100%;
+}
+.main_img .stripe {
+    width: 10px;
+    height: 100%;
+    background: #FFA400;
+    border: 1px solid #111111;
+    border-right: none;
+    border-radius: 5px;
+}
+.main_img .stripe:last-child {
+    border-right: 1px solid #111111;
+}
+/* //main_img */
+
+/* section1 */
+#section1 > h2 {
+    width: 100%;
+    padding: 150px 50px 50px;
+    font-size: 60px;
+    font-weight: 400;
+}
+#section1 .filter {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1.5px solid #111111;
+    border-bottom: 1.5px solid #111111;
+    padding: 20px 30px; 
+}
+#section1 .filter .sort {
+    display: flex;
+    justify-content: left;
+    width: 35%;
+    font-weight: 600;
+}
+#section1 .filter .sort > p {
+    width: 10%;
+}
+#section1 .filter .sort .tabs {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+}
+#section1 .filter .sort .tabs > a {
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
+    text-align: center;
+}
+#section1 .filter .sort .tabs > a:hover {
+    color: #111111;
+}
+#section1 .filter .sort .tabs > a.tab {
+    color: #111111; /* 활성화된 탭의 글씨 색상 */
+}
+#section1 .filter > a {
+    display: block;
+    width: 6%;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+#section1 .filter > a:hover {
+    color: #FFA400;
+}
+/* edition */
+.edition {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100.1%;
+}
+.edition .card {
+    width: calc(100%/3);
+    border-right: 1px solid #111111;
+    border-bottom: 1px solid #111111;
+    box-sizing: border-box;
+}
+.edition .card > a {
+    display: block;
+    width: 100%;
+    height: 700px;
+    background-color: #fff;
+}   
+.edition .card > a > figure {
+    width: 100%;
+    height: 85%;
+    border-bottom: 1px solid #111111;
+    margin-bottom: 20px;
+    transition: all 0.5s;
+}
+.edition .card > a > figure > img {
+    display: block;
+    width: 95%;
+    height: 95%;
+    padding: 2%;
+    transition: all 0.5s;
+}
+.edition .card > a:hover > figure > img {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+.edition .card > a:hover .product_name {
+    background: url(../img/arrow.svg) no-repeat right center /15px;
+}
+.edition .card:nth-child(3) > a:hover .product_name {
+    background: url(../img/arrow.svg) no-repeat right 3px center /15px;
+}
+.edition .card:nth-child(6) > a:hover .product_name {
+    background: url(../img/arrow.svg) no-repeat right 3px center /15px;
+}
+/* edition */
+/* .product_name 공통부분 */
+.product_name {
+    font-weight: 600;
+    margin-left: 20px;
+    width: 92%;
+}
+.opacity {
+    opacity: 0.7;
+}
+.price {
+    color: #FFA400;
+}
+/* p > span 공통부분 */
+/* filter_area */
+.dim {
+    position: fixed;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    display: none;
+}
+#filter_area {
+    position: fixed;
+    top: 0; right: -100%; bottom: 0;
+    width: 33%;
+    background: #fefefe;
+    border-left: 1px solid #111111;
+    z-index: 11;
+    transition: right 0.5s;
+}
+#close {
+    position: absolute;
+    top: 10%; right: 5%;
+    width: 80px;
+    height: 40px;
+    font-size: 15px;
+    line-height: 38px;
+    background: #FFA400;
+    border: 1px solid #111111;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+#close:hover {
+    background: #111111;
+    color: #FFA400;
+    border-color: #FFA400;
+}
+.clear {
+    display: inline-block;
+    position: absolute;
+    top: 17%; left: 7%; 
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 600;
+    transition: all 0.5s;
+}
+.clear:hover {
+    color: #111111;
+}
+#filter_area .form1 {
+    position: absolute;
+    width: 85%;
+    height: 85%;
+    top: 22%; left: 50%;
+    transform: translateX(-50%);
+}
+#filter_area .form2 {
+    position: absolute;
+    width: 85%;
+    height: 85%;
+    top: 47%; left: 50%;
+    transform: translateX(-50%);
+}
+#filter_area form > div {
+    margin: 5% 0;
+}
+#filter_area form > p {
+    font-weight: 600;
+}
+#filter_area form label {
+    font-size: 14px;
+    vertical-align: 1.5px;
+    font-weight: 500;
+    cursor: pointer;
+}
+/* //filter_area */
+/* //section1 */
+
+/* main_img */
+.main_img3 {
+    display: flex;
+    justify-content: left;
+    height: 60px;
+    position: relative;
+    top: -10px;
+    margin-bottom: -12px;
+    z-index: 2;
+}
+.main_img3 .stripe {
+    width: 10px;
+    height: 100%;
+    background: #fff;
+    border: 1px solid #111111;
+    border-right: none;
+    border-radius: 5px;
+}
+/* //main_img */
+

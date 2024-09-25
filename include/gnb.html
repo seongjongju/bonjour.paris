@@ -1,0 +1,68 @@
+<!-- gnb -->
+<div class="gnb">
+    <div class="limited_Edition_img"></div>
+    <div class="sweatshirt_img"></div>
+    <div class="t-shirts_img"></div>
+    <div class="accessory_img"></div>
+    
+    <a href="index.html" class="shop_all">SHOP ALL</a>
+    <a href="edition_Limited.html" class="limited_Edition">LIMITED EDITION</a>
+    <a href="sweatshirts.html" class="sweatshirt">SWEAT SHIRTS</a>
+    <a href="#" class="T-shirt">T-SHIRTS</a>
+    <a href="#" class="accessory">ACCESSORYS</a>
+</div>
+<!-- gnb -->
+
+<script>
+    /* gnb */
+$(function() {
+    const menuBtn = $('.menu_btn');
+    const gnb = $('.gnb');
+    const gnbMenus = $('.gnb a');
+    const menuLine = $('.menu_line');
+
+    menuBtn.on('click', function() {
+        gnb.slideToggle();
+        gnbMenus.toggleClass('on')
+        menuLine.toggleClass('rotate')
+    })
+})
+
+const gnbMenus = document.querySelectorAll('.gnb a');
+const div1 = document.querySelector('.limited_Edition_img');
+const div2 = document.querySelector('.sweatshirt_img');
+const div3 = document.querySelector('.t-shirts_img');
+const div4 = document.querySelector('.accessory_img');
+/* console.log(gnbMenus) */
+gnbMenus.forEach(function(menu, index) {
+    menu.addEventListener('mouseover', function() {
+        if(index == 1) {
+            div1.classList.add('active')
+            div2.classList.remove('active')
+            div3.classList.remove('active')
+            div4.classList.remove('active')
+        } else if (index == 2) {
+            div1.classList.remove('active')
+            div2.classList.add('active')
+            div3.classList.remove('active')
+            div4.classList.remove('active')
+        } else if (index == 3) {
+            div1.classList.remove('active')
+            div2.classList.remove('active')
+            div3.classList.add('active')
+            div4.classList.remove('active')
+        } else if (index == 4) {
+            div1.classList.remove('active')
+            div2.classList.remove('active')
+            div3.classList.remove('active')
+            div4.classList.add('active')
+        } else {
+            div1.classList.remove('active')
+            div2.classList.remove('active')
+            div3.classList.remove('active')
+            div4.classList.remove('active')
+        }
+    })
+})
+/* gnb */
+</script>

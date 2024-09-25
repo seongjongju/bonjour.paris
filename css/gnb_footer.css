@@ -1,0 +1,299 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+/* header */
+header {
+    top: 0; left: 0; right: 0;
+    height: 60px;
+    background: #111111;
+    padding: 0 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+}
+header .menu_btn {
+    display: block;
+    width: 87px;
+    height: 40px;
+    background: #FFA400 url(../img/smalllogo.svg) no-repeat 15px/20px;
+    border-radius: 80px;
+    border: 1px solid #FFA400;
+    transition: all 0.5s;
+}
+header .menu_btn .menu_line {
+    display: block;
+    width: 20px;
+    height: 1px;
+    margin: 15.5px 0 0 50px;
+    background: #111111;
+    position: relative;
+    transition: all 0.5s;
+}
+/* 메뉴 아이콘 변화 자바스크립트 클래스 */
+.menu_line.rotate:first-child {
+    transform: rotate(45deg);
+    top: 7.5%;
+}
+.menu_line.rotate:nth-child(2) {
+    transform: rotate(-45deg);
+    bottom: 7.5%;
+}
+/* 메뉴 아이콘 변화 자바스크립트 클래스 */
+header .menu_btn .menu_line:nth-child(2) {
+    margin-top: 5px;
+}
+header .menu_btn:hover { 
+    background: url(../img/smalllogo2-svg.png) no-repeat 15px/20px;
+}
+header .menu_btn:hover .menu_line {
+    background: #FFA400;
+}
+header .cart_btn {
+    display: block;
+    width: 85px;
+    height: 40px;
+    background: #FFA400 url(../img/cart.svg) no-repeat 15px/15px;
+    border-radius: 80px;
+    border: 1px solid #FFA400;
+    transition: all 0.5s;
+}
+header .cart_btn > span {
+    display: block;
+    line-height: 42px;
+    text-align: right;
+    margin-right: 20%;
+    font-weight: 500;
+}
+header .cart_btn:hover {
+    background: #111111 url(../img/cart2-svg.png) no-repeat 15px/15px;
+}
+header .cart_btn:hover > span {
+    color: #FFA400;
+}
+/* gnb */
+.gnb {
+    width: 100%;
+    height: 100vh;
+    background: #111111;
+    border-top: 1.5px solid #fff;
+    position: fixed;
+    top: 60px;
+    z-index: 999;
+    display: none;
+}
+.gnb > a {
+    display: block;
+    width: 100%;
+    height: 0;
+    border-top: 1.5px solid #fff;
+    font-size: 60px;
+    line-height: 120px;
+    color: #fff;
+    padding-left: 40px;
+    overflow: hidden;
+    transition: height 1s;
+}
+/* gnb a 토글 클래스 */
+.gnb a.on { 
+    height: 70px;
+}
+/* gnb a 토글 클래스 */
+.gnb > a:hover {
+    height: 90px;
+    line-height: 90px;
+    color: #FFA400;
+    transition: height 0.5s, line-height 0.5s;
+}
+.gnb .shop_all {
+    margin-top: 26.5%;
+}
+/* 이미지 부분 */
+.gnb > div {
+    background: #111111 no-repeat center / 80%;
+    width: 45%;
+    height: 93%;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    right: -100%;
+    transform: rotate(90deg);
+    opacity: 0;
+    z-index: 1;
+    transition: all 0.8s;
+}
+.gnb > div.active {
+    right: 0;
+    transform: rotate(0deg);
+    opacity: 1;
+}
+.gnb > .limited_Edition_img {
+    background-image: url(../img/editions_Limitees/limitees3.png);
+}
+.gnb > .sweatshirt_img {
+    background-image: url(../img/index/section2_1.png);
+}
+.gnb > .t-shirts_img {
+    background-image: url(../img/t-shirts/t-shirts3.png);
+}
+.gnb > .accessory_img {
+    background-image: url(../img/accessoires/accessoires2.png);
+}
+/* gnb */
+/* //haeder */
+
+/* footer */
+footer {
+    height: 530px;
+    border: 1px solid #111111;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+/* 푸터 슬라이드 */
+footer .footer_Swiper {
+    width: 959px;
+    height: 100%;
+    border-right: 1px solid #111111;
+    background: #FFA400;
+    position: relative;
+}
+footer .footer_Swiper .swiper-slide {
+    background: no-repeat center/cover;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+footer .footer_Swiper .footer_slide1 {
+    background-image: url(../img/index/footer01.webp);
+}
+footer .footer_Swiper .footer_slide2 {
+    background-image: url(../img/index/footer02.webp);
+}
+footer .footer_Swiper .footer_slide3 {
+    background-image: url(../img/index/footer03.webp);
+}
+footer .footer_Swiper .swiper-slide .f_text {
+    color: #fff;
+    font-size: 60px;
+    height: 100%;
+    padding: 25% 0;
+}
+footer .footer_Swiper .swiper-slide .f_text > span {
+    display: block;
+    font-size: 15px;
+}
+/* 푸터 슬라이드 */
+/* sns */
+footer .sns_box {
+    width: 125px;
+    height: 100%;
+    padding: 5% 0;
+    background-color: #fff;
+    position: relative;
+}
+footer .sns_box > a {
+    display: block;
+    background: no-repeat center/ contain;
+    width: 45px;
+    height: 45px;
+    margin: 30px auto;
+    transition: all 0.5s;
+}
+footer .sns_box .click_mail {
+    position: absolute;
+    top: 5%; left: -20%;
+    width: 170px;
+    height: 30px;
+    background-color: #FFA400;
+    border: 1px solid #111111;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    z-index: 1;
+    opacity: 0;
+    cursor: default;
+}
+footer .sns_box .mail {
+    background-image: url(../img/mail.svg);
+}
+footer .sns_box .facebook {
+    background-image: url(../img/facebook.svg);
+}
+footer .sns_box .insta {
+    background-image: url(../img/insta.svg);
+}
+footer .sns_box .insta_logo {
+    background-image: url(../img/insta_icon.svg);
+}
+footer .sns_box .mail:hover {
+    background-image: url(../img/mail_b-svg.png);
+}
+footer .sns_box .facebook:hover {
+    background-image: url(../img/facebook_b-svg.png);
+}
+footer .sns_box .insta:hover {
+    background-image: url(../img/insta_b-svg.png);
+}
+footer .sns_box .insta_logo:hover {
+    background-image: url(../img/insta_icon_b-svg.png);
+}
+/* sns */
+footer .address {
+    width: 835px;
+    height: 100%;
+    background: #111111;
+    border-left: 1px solid #111111;
+    display: flex;
+    justify-content: space-between;
+}
+footer .address .left {
+    width: 80%;
+    height: 100%;
+}
+footer .address .left a {
+    display: block;
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+footer .address .left a:hover {
+    color: #FFA400;
+}
+footer .address .left .left_top {
+    height: 40%;
+    padding: 60px;
+}
+footer .address .left .left_bottom  {
+    height: 50%;
+    padding: 60px;
+}
+footer .address .left .left_bottom > p {
+    color: #FFA400;
+    font-size: 14px;
+}
+footer .address > a {
+    display: block;
+    background: #FFA400;
+    width: 60px;
+    height: 60px;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    line-height: 60px;
+    border: 1px solid #111111;
+    border-radius: 100%;
+    margin: 40px auto;
+    transition: all 0.5s;
+}
+footer .address > a:hover {
+    background-color: #111111;
+    color: #FFA400;
+    border-color: #FFA400;
+}
+/* //footer */

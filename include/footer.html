@@ -1,0 +1,76 @@
+<!-- footer -->
+<footer>
+    <!-- Swiper -->
+    <div class="swiper footer_Swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide footer_slide1">
+                <p class="f_text">
+                    SECURED PAYMENT
+                    <span>Master card, visa, amex... 100% secured payment</span>
+                </p>
+            </div>
+            <div class="swiper-slide footer_slide2">
+                <p class="f_text">
+                    ECOLOGIC
+                    <span>100% recycled & essential</span>
+                </p>
+            </div>
+            <div class="swiper-slide footer_slide3">
+                <p class="f_text">
+                    DELIVERY
+                    <span>Track your order from the market to your door</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="sns_box">
+        <a href="#" class="click_mail">Click to copy mail</a>
+        <a href="#" class="mail"></a>
+        <a href="#" class="facebook"></a>
+        <a href="#" class="insta"></a>
+        <a href="#" class="insta_logo"></a>
+    </div>
+
+    <div class="address">
+        <div class="left">
+            <div class="left_top">
+                <a href="#">DELIVERY AND RETURNS</a>
+                <a href="#">LEGALS</a>
+                <a href="#">TERMS AND CONDITIONS</a>
+            </div>
+            <div class="left_bottom">
+                <a href="#">VISIT BONJOUR PARIS</a>
+                <p>© Bonjour Paris, 2023</p>
+            </div>
+        </div>
+        <a href="#" class="fr">
+            FR
+        </a>
+    </div>
+</footer>
+<!-- //footer -->
+
+<script>
+    /* footer .sns_box */
+const mail = document.querySelector('.mail');
+
+mail.addEventListener('mouseover',function() {
+    let clickMail = document.querySelector('.click_mail');
+    clickMail.style.opacity = 1
+});
+
+mail.addEventListener('mouseleave', function() {
+    let clickMail = document.querySelector('.click_mail');
+    clickMail.style.opacity = 0
+})
+/* footer .sns_box */
+
+
+/* footer_swiper */
+var swiper = new Swiper(".footer_Swiper", {
+    loop: true,
+    autoplay: true,
+});
+ /* footer_swiper */
+</script>

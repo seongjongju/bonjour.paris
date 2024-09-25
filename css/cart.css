@@ -1,0 +1,82 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+#wrap {
+    overflow: hidden;
+}
+
+/* main_img */
+.main_img {
+    position: relative;
+    height: 200px;
+    display: flex;
+    justify-content: left;
+}
+.main_img .logo {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -20%);
+}
+.main_img .logo > a {
+    display: block;
+    background: url(../img/biglogo.svg) no-repeat center/cover;
+    width: 100%;
+    height: 100%;
+}
+.main_img .stripe {
+    width: 10px;
+    height: 100%;
+    background: #FFA400;
+    border: 1px solid #111111;
+    border-right: none;
+    border-radius: 5px;
+}
+/* //main_img */
+
+/* section_loop */
+.loop {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: left;
+    border-bottom: 1px solid #111111;
+}
+.loop > span {
+    display: block;
+    white-space: nowrap;
+    position: relative;
+    font-size: 70px;
+    line-height: 100px;
+    animation: scroll-left 100s linear infinite;
+}
+@keyframes scroll-left {
+    0% {
+        left: 10%;
+    }
+    100% {
+        left: -100%;
+    }
+}
+/* //section_loop */
+
+/* VISIT THE STORE */
+#visit {
+    display: block;
+    width: 160px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid #111111;
+    background: #FFA400;
+    color: #111111;
+    margin: 15% auto;
+    transition: all 0.3s;
+}
+#visit:hover {
+    background: #111111;
+    color: #FFA400;
+}

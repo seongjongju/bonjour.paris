@@ -1,0 +1,345 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+#wrap {
+    overflow: hidden;
+}
+::-webkit-scrollbar {
+    width: 12px; /* 스크롤바의 너비 */
+}
+
+/* 스크롤바의 트랙 (스크롤바가 이동하는 영역) */
+::-webkit-scrollbar-track {
+    background: #111111; /* 트랙의 배경색 */
+}
+
+/* 스크롤바 핸들 (스크롤바의 드래그 가능한 부분) */
+::-webkit-scrollbar-thumb {
+    background: #FFA400; /* 핸들의 배경색 */
+}
+/* main_img */
+.main_img {
+    position: relative;
+    width: 1920px;
+    height: 275px;
+    display: flex;
+    justify-content: left;
+}
+.main_img .logo {
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -30%);
+}
+.main_img .logo > a {
+    display: block;
+    background: url(../img/biglogo.svg) no-repeat center/cover;
+    width: 100%;
+    height: 100%;
+}
+/* .main_img1_stripe {
+    height: 270px;
+    background: url(../img/bg_stripe.png) repeat-x left top / contain; 
+} */
+.main_img .stripe {
+    width: 10px;
+    height: 100%;
+    background: #FFA400;
+    border: 1px solid #111111;
+    border-right: none;
+    border-radius: 5px;
+}
+.main_img .stripe:last-child {
+    border-right: 1px solid #111111;
+}
+/* //main_img */
+
+/* section_loop */
+.loop {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: left;
+}
+.loop > span {
+    display: block;
+    white-space: nowrap;
+    position: relative;
+    font-size: 70px;
+    line-height: 100px;
+    animation: scroll-left 100s linear infinite;
+}
+@keyframes scroll-left {
+    0% {
+        left: 10%;
+    }
+    100% {
+        left: -100%;
+    }
+}
+/* //section_loop */
+
+/* section1 */
+/* section 공통 */
+section {
+    width: 100%;
+}
+/* section 공통 */
+#section1 {
+    background: url(../img/index/section1_1.jpg) no-repeat center / cover;
+    height: 979px;
+    border: 1px solid #111111;
+}
+/* //section1 */
+
+/* section2 */
+#section2 {
+    border: 1px solid #111111;
+    display: flex;
+    justify-content: space-between;
+}
+#section2 .card {
+    width: calc(100%/3);
+    border-right: 1px solid #111111;
+}
+#section2 .card > a {
+    display: block;
+    width: 100%;
+    height: 770px;
+    background-color: #fff;
+}
+#section2 .card > a > figure {
+    background: no-repeat center / 500px;
+    width: 100%;
+    height: 85%;
+    border-bottom: 1px solid #111111;
+    margin-bottom: 20px;
+    transition: all 0.5s;
+}
+#section2 .card > a .section2_1 {
+    background-image: url(../img/index/section2_1.png);
+}
+#section2 .card > a .section2_2 {
+    background-image: url(../img/index/section2_2.png);
+}
+#section2 .card > a .section2_3 {
+    background-image: url(../img/index/section2_3.png);
+}
+#section2 .card > a:hover > figure {
+    background-size: 550px;
+}
+/* .product_name 공통부분 */
+.product_name {
+    font-weight: 600;
+    margin-left: 20px;
+}
+.opacity {
+    opacity: 0.7;
+}
+.price {
+    color: #FFA400;
+}
+/* p > span 공통부분 */
+/* //section2 */
+
+/* main_img2 */
+.main_img2 {
+    position: relative;
+    top: -10px;
+    height: 190px;
+    display: flex;
+    justify-content: left;
+    z-index: -1;
+}
+.main_img2 .stripe {
+    width: 10px;
+    height: 100%;
+    background: #fff;
+    border: 1px solid #111111;
+    border-right: none;
+    border-radius: 5px;
+}
+.main_img2 .stripe:last-child {
+    border-right: 1px solid #111111;
+}
+/* //main_img2 */
+
+/* section3 */
+#section3 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -12px;
+    border-bottom: 1px solid #111111;
+    position: relative;
+    z-index: -2;
+}
+#section3 > figure {
+    background: no-repeat center / cover;
+    width: 100%;
+    height: 979px;
+}
+#section3 .section3_1 {
+    background-image: url(../img/index/section3_1.jpg);
+}
+#section3 .section3_2 {
+    background-image: url(../img/index/section3_2.jpg);
+}
+/* //section4 */
+
+/* section4 */
+#section4 .section4_Swiper {
+    width: 100%;
+    height: 878px;
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.7);
+}
+#section4 .section4_Swiper .swiper-slide .card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-right: 1.5px solid rgba(0, 0, 0, 0.7);
+    transition: all 0.5s;
+}
+/* 이미지 부분 */
+#section4 .section4_Swiper .swiper-slide .card > figure {
+    position: relative;
+    background: no-repeat center / cover;
+    width: 88.3%;
+    height: 80%;
+    margin: 0 auto;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    transition: all 0.5s;
+} 
+#section4 .section4_Swiper .swiper-slide .card > video {
+    position: absolute;
+    width: 88.3%;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(0, 0, 0, 0.7);
+}
+#section4 .section4_Swiper .swiper-slide .card .section4_1 {
+    background-image: url(../img/index/section4_1_b.jpg);
+}
+#section4 .section4_Swiper .swiper-slide .card .section4_2 {
+    background-image: url(../img/index/section4_2_b.jpg);
+}
+#section4 .section4_Swiper .swiper-slide .card .section4_3 {
+    background-image: url(../img/index/section4_3_b.jpg);
+}
+#section4 .section4_Swiper .swiper-slide .card .section4_4 {
+    background-image: url(../img/index/section4_4_b.jpg);
+}
+#section4 .section4_Swiper .swiper-slide .card:hover figure {
+    opacity: 0;
+}
+/* 이미지 부분 */
+/* 텍스트 부분 */
+#section4 .section4_Swiper .swiper-slide .card .text {
+    width: 100%;
+    height: 10%;
+    line-height: 87px;
+    text-align: center;
+    font-size: 17px;
+    color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: all 0.5s;
+}
+#section4 .section4_Swiper .swiper-slide .card:hover .text {
+    opacity: 1;
+}
+/* 텍스트 부분 */
+/* //section4 */
+
+/* section5 */
+#section5 {
+    display: flex;
+    justify-content: space-between;
+    height: 979px;
+    border: 1px solid #111111;
+}
+#section5 .section5_1 {
+    background: url(../img/index/section5_1.jpg) no-repeat center / cover;
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid #111111;
+}
+#section5 .section5_2 {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#section5 .section5_2 > figure {
+    background: url(../img/index/section5_2.png) no-repeat center / 850px;
+    width: 100%;
+    height: 95%;
+   transition: all 0.5s;
+}
+
+#section5 .section5_2:hover > figure {
+    background-size: 800px;
+}
+#section5 .product_name {
+    width: 92%;
+    background: url(../img/arrow.svg) no-repeat right center /15px;
+}
+/* //section5 */
+
+/* section6 */
+#section6 {
+    display: flex;
+    justify-content: space-between;
+    height: 979px;
+    border: 1px solid #111111;
+    position: relative;
+    z-index: 3;
+}
+#section6 .section6_1 {
+    display: block;
+    width: 110%;
+    height: 100%;
+    background-color: #fff;
+}
+#section6 .section6_1 > figure {
+    background: url(../img/index/section6_1.png) no-repeat center / 850px;
+    width: 100%;
+    height: 95%;
+   transition: all 0.5s;
+}
+
+#section6 .section6_1:hover > figure {
+    background-size: 800px;
+}
+#section6 .product_name {
+    width: 92%;
+    background: url(../img/arrow.svg) no-repeat right center /15px;
+}
+#section6 .section6_2 {
+    background: url(../img/index/section6_2.jpg) no-repeat top / cover;
+    width: 90%;
+    height: 100%;
+    border-left: 1px solid #111111;
+}
+/* //section6 */
+
+/* main_img */
+.main_img3 {
+    display: flex;
+    justify-content: left;
+    height: 60px;
+    position: relative;
+    top: -10px;
+    margin-bottom: -12px;
+    z-index: 2;
+}
+.main_img3 .stripe {
+    width: 10px;
+    height: 100%;
+    background: #fff;
+    border: 1px solid #111111;
+    border-right: none;
+    border-radius: 5px;
+}
+.main_img3 .stripe:last-child {
+    border-right: 1px solid #111111;
+}
+/* //main_img */
