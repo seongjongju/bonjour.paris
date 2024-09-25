@@ -93,7 +93,10 @@ header .cart_btn:hover > span {
     color: #fff;
     padding-left: 40px;
     overflow: hidden;
-    transition: height 1s;
+    transition: all 0.6s;
+}
+.gnb > a:last-child {
+    line-height: 90px;
 }
 /* gnb a 토글 클래스 */
 .gnb a.on { 
@@ -104,7 +107,6 @@ header .cart_btn:hover > span {
     height: 90px;
     line-height: 90px;
     color: #FFA400;
-    transition: height 0.5s, line-height 0.5s;
 }
 .gnb .shop_all {
     margin-top: 26.5%;
